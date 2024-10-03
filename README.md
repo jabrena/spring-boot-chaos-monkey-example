@@ -17,6 +17,7 @@ time curl -X GET "http://localhost:8080/v1/demo" \
 
 ## References
 
+- https://principlesofchaos.org/
 - https://codecentric.github.io/chaos-monkey-spring-boot/
 - https://codecentric.github.io/chaos-monkey-spring-boot/latest/
 
