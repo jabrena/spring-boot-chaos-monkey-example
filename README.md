@@ -10,6 +10,9 @@ sdk env install
 ./mvnw clean spring-boot:run
 ./mvnw help:all-profiles
 ./mvnw clean spring-boot:run -P chaos-monkey -Dspring-boot.run.profiles=chaos-monkey
+./mvnw clean verify -P chaos-monkey
+jar tf ./target/*.jar
+java -jar ./target/*.jar --spring.profiles.active=chaos-monkey
 
 time curl -X GET "http://localhost:8080/v1/demo" \
      -H "Content-Type: application/json"
